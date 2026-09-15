@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --navy: #071426;
-  --navy-light: #0d1f38;
-  --blue: #0879f9;
-  --blue-light: #38a4ff;
-  --white: #ffffff;
-  --off-white: #f5f7fa;
-  --grey: #667085;
-  --dark-grey: #1d2939;
-  --border: #e4e7ec;
+  --navy: #26320C;
+  --navy-light: #334310;
+  --blue: #4B5D16;
+  --blue-light: #7c9438;
+  --white: #FFFFFF;
+  --off-white: #F7F8F3;
+  --grey: #5c664d;
+  --dark-grey: #26320c;
+  --border: #E7E9DF;
 }
 
 * {
@@ -122,8 +122,8 @@ a {
   min-height: 760px;
   overflow: hidden;
   background:
-    radial-gradient(circle at 75% 35%, rgba(8, 121, 249, 0.2), transparent 32%),
-    linear-gradient(125deg, #050d18 0%, #09182c 52%, #071426 100%);
+    radial-gradient(circle at 75% 35%, rgba(75, 93, 22, 0.2), transparent 32%),
+    linear-gradient(125deg, #1c2509 0%, #202b0a 52%, #26320C 100%);
   color: white;
 }
 
@@ -201,7 +201,7 @@ a {
 }
 
 .button-primary:hover {
-  background: #0066d9;
+  background: #3e4d12;
   transform: translateY(-2px);
 }
 
@@ -239,7 +239,7 @@ a {
   right: 80px;
   background: radial-gradient(
     circle,
-    rgba(8, 121, 249, 0.14),
+    rgba(75, 93, 22, 0.14),
     transparent 70%
   );
 }
@@ -662,7 +662,7 @@ a {
 /* Footer */
 
 .footer {
-  background: #040c16;
+  background: #192208;
   color: white;
 }
 

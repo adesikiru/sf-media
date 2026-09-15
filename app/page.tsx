@@ -196,7 +196,7 @@ export default function Home() {
 
                 <p>{service.description}</p>
 
-                <span className="service-arrow">↗</span>
+                <span className="service-arrow"></span>
               </article>
             ))}
           </div>
@@ -341,7 +341,7 @@ export default function Home() {
             </p>
 
             <a
-              href="mailto:emmaojoade@gmail.com"
+              href="mailto:sfmediamgtinc@gmail.com"
               className="button button-light"
             >
               Contact SF Media →
@@ -391,13 +391,13 @@ export default function Home() {
               Nigeria
             </p>
 
-            <span>Nigeria telephone — coming soon</span>
+            <span>Nigeria telephone — +234 802 122 3377</span>
           </div>
 
           <div className="footer-column">
             <h4>Contact</h4>
-            <a href="mailto:emmaojoade@gmail.com">
-              emmaojoade@gmail.com
+            <a href="mailto:sfmediamgtinc@gmail.com">
+              sfmediamgtinc@gmail.com
             </a>
           </div>
         </div>
