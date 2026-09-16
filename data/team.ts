@@ -44,7 +44,7 @@ export const teamData: TeamMember[] = [
     name: "Ademola Sikiru Akeso",
     title: "Chief Technology Officer",
     shortTitle: "CTO",
-    image: "/team/techlead.png",
+    image: "/team/techlead.PNG",
     bio: [
       "Ademola Sikiru Akeso is a Software Engineer, Technology Entrepreneur, AI and Blockchain Enthusiast, Youth Leadership Advocate and Community Builder with professional experience spanning software development, web technologies, blockchain, digital products, technology education and emerging technology ecosystems.",
       "He has built his career at the intersection of technology, entrepreneurship, innovation and community development, with a particular interest in using digital solutions to solve practical problems and create opportunities for individuals, businesses and communities. His technical experience covers frontend and backend engineering, full-stack web development, application architecture, databases, APIs, cloud deployment, blockchain technologies and digital product development.",
