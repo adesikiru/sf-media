@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import Link from "next/link";
+import { teamData } from "../data/team";
 
 const services = [
   {
@@ -59,6 +60,7 @@ export default function Home() {
             <Link href="/">Home</Link>
             <Link href="#about">About</Link>
             <Link href="#services">Services</Link>
+            <Link href="#team">Team</Link>
             <Link href="#presence">Our Presence</Link>
             <Link href="#contact" className="nav-cta">
               Contact
@@ -255,6 +257,39 @@ export default function Home() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section id="team" className="section team-section">
+        <div className="container">
+          <div className="section-heading centered">
+            <p className="section-label">MEET OUR TEAM</p>
+            <h2>
+              The people behind
+              <br />
+              <span>the vision.</span>
+            </h2>
+          </div>
+
+          <div className="team-grid">
+            {teamData.map((member) => (
+              <Link href={`/team/${member.id}`} key={member.id} className="team-card">
+                <div className="team-image-wrapper">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="team-image"
+                  />
+                </div>
+                <div className="team-info">
+                  <h3>{member.name}</h3>
+                  <p>{member.shortTitle}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

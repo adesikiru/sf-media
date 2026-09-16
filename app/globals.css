@@ -523,6 +523,135 @@ a {
   line-height: 1.7;
 }
 
+
+/* Team */
+
+.team-section {
+  background: var(--off-white);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+  border-color: rgba(75, 93, 22, 0.3);
+}
+
+.team-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: var(--border);
+}
+
+.team-image {
+  object-fit: cover;
+}
+
+.team-info {
+  padding: 24px;
+}
+
+.team-info h3 {
+  font-size: 20px;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.team-info p {
+  font-size: 13px;
+  color: var(--blue-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Profile Page */
+
+.team-profile-page {
+  padding-top: 88px; /* Header height */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-profile-page .site-header {
+  background: var(--navy);
+}
+
+.profile-section {
+  flex-grow: 1;
+  background: white;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.profile-image-container {
+  position: sticky;
+  top: 120px;
+}
+
+.profile-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.profile-image {
+  object-fit: cover;
+}
+
+.profile-content {
+  padding-top: 10px;
+}
+
+.profile-name {
+  font-size: clamp(32px, 4vw, 48px);
+  color: var(--navy);
+  margin-bottom: 12px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.profile-title {
+  font-size: 18px;
+  color: var(--blue);
+  font-weight: 600;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--border);
+}
+
+.profile-bio p {
+  color: var(--grey);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
 /* Presence */
 
 .presence-section {
@@ -791,6 +920,15 @@ a {
 
   .footer-main {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-image-container {
+    position: relative;
+    top: 0;
   }
 }
 
