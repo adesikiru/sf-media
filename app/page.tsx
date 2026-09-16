@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import Link from "next/link";
 import { teamData } from "../data/team";
+import MediaCoverage from "./components/MediaCoverage";
 
 const services = [
   {
@@ -204,6 +205,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Media Coverage */}
+      <MediaCoverage />
 
       {/* History */}
       <section className="section history-section">
