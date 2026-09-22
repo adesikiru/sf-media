@@ -76,7 +76,7 @@ export default function Home() {
 
         <div className="container hero-content">
           <div className="hero-copy">
-            <p className="eyebrow">CANADA · NIGERIA · BEYOND</p>
+            <p className="eyebrow">CANADA · {/* NIGERIA · */ } BEYOND</p>
 
             <h1>
               Communication that
@@ -145,8 +145,9 @@ export default function Home() {
             <p>
               SF Media Management and Multipurpose Inc. is a Canadian media,
               communications, brand-management and multipurpose services
-              company headquartered in Ontario, Canada, with a branch office
-              in Nigeria.
+              company headquartered in Ontario, Canada.
+              {/* with a branch office
+              in Nigeria. */}
             </p>
 
             <p>
@@ -158,7 +159,7 @@ export default function Home() {
 
             <p>
               By combining international experience with a strong
-              understanding of the Nigerian media and public environment, SF
+              understanding of the {/* Nigerian */} media and public environment, SF
               Media delivers creative, timely and results-oriented solutions
               tailored to each client&apos;s objectives.
             </p>
@@ -207,7 +208,7 @@ export default function Home() {
       </section>
 
       {/* Media Coverage */}
-      <MediaCoverage />
+     {/*  <MediaCoverage /> */}
 
       {/* History */}
       <section className="section history-section">
@@ -251,7 +252,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="timeline-item">
+            {/* <div className="timeline-item">
               <span>NIGERIA</span>
               <div>
                 <h3>Expanding local operations</h3>
@@ -260,7 +261,7 @@ export default function Home() {
                   operations and better serve clients within the country.
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -322,11 +323,11 @@ export default function Home() {
               <p>
                 SF Media Management and Multipurpose Inc.
                 <br />
-                109-7800 Lundys Lane
+               359 Carlton St
                 <br />
-                Niagara Falls, ON
+               St. Catharines, ON
                 <br />
-                L2H 1H1, Canada
+                L2N 1C2, Canada
               </p>
 
               <div className="location-meta">
@@ -335,7 +336,7 @@ export default function Home() {
               </div>
             </article>
 
-            <article className="location-card location-card-dark">
+           {/*  <article className="location-card location-card-dark">
               <div className="location-top">
                 <span className="location-code">NG</span>
                 <span>BRANCH OFFICE</span>
@@ -355,7 +356,7 @@ export default function Home() {
                 <span>RC Number</span>
                 <strong>9390287</strong>
               </div>
-            </article>
+            </article> */}
           </div>
         </div>
       </section>
@@ -410,17 +411,17 @@ export default function Home() {
           <div className="footer-column">
             <h4>Canada</h4>
             <p>
-              109-7800 Lundys Lane
+              359 Carlton St,
               <br />
-              Niagara Falls, ON
+              St. Catharines, ON L2N 1C2,
               <br />
-              L2H 1H1, Canada
+              Canada
             </p>
 
             <a href="tel:+14379252089">+1 437 925 2089</a>
           </div>
 
-          <div className="footer-column">
+          {/* <div className="footer-column">
             <h4>Nigeria</h4>
             <p>
               22 Ogunde Street, Off Adeola, Agric,
@@ -431,10 +432,13 @@ export default function Home() {
             </p>
 
             <span>Nigeria telephone — +234 802 122 3377</span>
-          </div>
+          </div> */}
 
           <div className="footer-column">
             <h4>Contact</h4>
+            <a href="mailto:ceo@sfmediamgt.ca">
+              ceo@sfmediamgt.ca
+            </a>
             <a href="mailto:sfmediamgtinc@gmail.com">
               sfmediamgtinc@gmail.com
             </a>
@@ -447,7 +451,7 @@ export default function Home() {
             Reserved.
           </span>
 
-          <span>Canada · Nigeria · Beyond</span>
+          <span>Canada ·{/*  Nigeria · */} Beyond</span>
         </div>
       </footer>
     </main>
