@@ -438,7 +438,7 @@ export default function Home() {
             <h4>Contact</h4>
             <a href="mailto:ceo@sfmediamgt.ca">
               ceo@sfmediamgt.ca
-            </a>
+            </a> 
             <br />
             <a href="mailto:sfmediamgtinc@gmail.com">
               sfmediamgtinc@gmail.com
