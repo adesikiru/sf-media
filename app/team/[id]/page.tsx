@@ -65,7 +65,7 @@ export default async function TeamProfilePage({
       <footer className="footer">
         <div className="container footer-bottom">
           <span>
-            © 2026 SF Media Management and Multipurpose Inc. All Rights
+            © 2022 SF Media Management and Multipurpose Inc. All Rights
             Reserved.
           </span>
           <span>Canada · Nigeria · Beyond</span>

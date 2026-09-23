@@ -439,6 +439,7 @@ export default function Home() {
             <a href="mailto:ceo@sfmediamgt.ca">
               ceo@sfmediamgt.ca
             </a>
+            <br />
             <a href="mailto:sfmediamgtinc@gmail.com">
               sfmediamgtinc@gmail.com
             </a>
@@ -447,7 +448,7 @@ export default function Home() {
 
         <div className="container footer-bottom">
           <span>
-            © 2026 SF Media Management and Multipurpose Inc. All Rights
+            © 2022 SF Media Management and Multipurpose Inc. All Rights
             Reserved.
           </span>
 
