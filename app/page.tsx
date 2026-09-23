@@ -411,7 +411,7 @@ export default function Home() {
           <div className="footer-column">
             <h4>Canada</h4>
             <p>
-              359 Carlton St,
+              359 Carlton St Unit 202,
               <br />
               St. Catharines, ON L2N 1C2,
               <br />
