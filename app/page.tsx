@@ -323,11 +323,11 @@ export default function Home() {
               <p>
                 SF Media Management and Multipurpose Inc.
                 <br />
-               359 Carlton St
+                204 Niagara Street,
                 <br />
-               St. Catharines, ON
+                St. Catharines, Ontario.
                 <br />
-                L2N 1C2, Canada
+                L2M4V4, Canada
               </p>
 
               <div className="location-meta">
@@ -411,11 +411,11 @@ export default function Home() {
           <div className="footer-column">
             <h4>Canada</h4>
             <p>
-              359 Carlton St Unit 202,
+              204 Niagara Street,
               <br />
-              St. Catharines, ON L2N 1C2,
+              St. Catharines  Ontario.
               <br />
-              Canada
+              L2M4V4, Canada.
             </p>
 
             <a href="tel:+14379252089">+1 437 925 2089</a>
