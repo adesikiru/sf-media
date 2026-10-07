@@ -10,6 +10,7 @@ export default function Contact() {
     message: ""
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
@@ -18,21 +19,41 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Contact: ${formData.reason}`);
-    const body = encodeURIComponent(`Name: ${formData.name}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:ceo@sfmedia.ca?subject=${subject}&body=${body}`;
-    
-    // Show success modal
-    setIsSubmitted(true);
-    
-    // Reset form optionally
-    setFormData({
-      name: "",
-      reason: "General Inquiry",
-      message: ""
-    });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/ceo@sfmediamgt.ca", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify({
+          _subject: `New Contact Request: ${formData.reason}`,
+          name: formData.name,
+          reason: formData.reason,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({
+          name: "",
+          reason: "General Inquiry",
+          message: ""
+        });
+      } else {
+        alert("There was an error sending your message. Please try again later.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("There was an error sending your message. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -120,8 +141,8 @@ export default function Contact() {
               />
             </div>
 
-            <button type="submit" className="button button-primary" style={{ marginTop: '10px', width: '100%', border: 'none', cursor: 'pointer', fontFamily: 'inherit', fontSize: '15px' }}>
-              Send Message
+            <button type="submit" disabled={isSubmitting} className="button button-primary" style={{ marginTop: '10px', width: '100%', border: 'none', cursor: isSubmitting ? 'not-allowed' : 'pointer', fontFamily: 'inherit', fontSize: '15px', opacity: isSubmitting ? 0.7 : 1 }}>
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>
@@ -143,9 +164,9 @@ export default function Contact() {
               }}>
                 ✓
               </div>
-              <h3 style={{ color: 'var(--navy)', fontSize: '24px', marginBottom: '10px' }}>Message Prepared!</h3>
+              <h3 style={{ color: 'var(--navy)', fontSize: '24px', marginBottom: '10px' }}>Message Delivered!</h3>
               <p style={{ color: 'var(--grey)', lineHeight: '1.6', marginBottom: '25px', fontSize: '15px' }}>
-                Your email client has been opened to send the message. We will get back to you shortly.
+                Your message has been delivered to our team. We will get back to you shortly.
               </p>
               <button 
                 onClick={() => setIsSubmitted(false)}
