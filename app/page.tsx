@@ -63,7 +63,7 @@ export default function Home() {
             <Link href="#services">Services</Link>
             <Link href="#team">Team</Link>
             <Link href="#presence">Our Presence</Link>
-            <Link href="#contact" className="nav-cta">
+            <Link href="/contact" className="nav-cta">
               Contact
             </Link>
           </nav>
@@ -164,7 +164,7 @@ export default function Home() {
               tailored to each client&apos;s objectives.
             </p>
 
-            <Link href="#contact" className="text-link">
+            <Link href="/contact" className="text-link">
               Work with SF Media <span>→</span>
             </Link>
           </div>
@@ -380,12 +380,12 @@ export default function Home() {
               communicate with purpose.
             </p>
 
-            <a
-              href="mailto:sfmediamgtinc@gmail.com"
+            <Link
+              href="/contact"
               className="button button-light"
             >
               Contact SF Media →
-            </a>
+            </Link>
           </div>
         </div>
       </section>

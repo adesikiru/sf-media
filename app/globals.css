@@ -681,6 +681,17 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
+  justify-content: center;
+}
+
+.team-grid:has(> :only-child) {
+  display: flex;
+  justify-content: center;
+}
+
+.team-grid:has(> :only-child) > * {
+  width: 100%;
+  max-width: 320px;
 }
 
 .team-card {
@@ -815,6 +826,12 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+}
+
+.locations-grid:has(> :only-child) {
+  grid-template-columns: 1fr;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .location-card {
