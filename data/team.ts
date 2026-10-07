@@ -20,7 +20,7 @@ export const teamData: TeamMember[] = [
       "Through SF Media, Emmanuel leads the development and delivery of creative, professional and results-oriented solutions for individuals, businesses, corporate organisations, public institutions and community-based organisations. His leadership combines an understanding of diverse audiences with international experience gained over a decade ago.",
     ]
   },
-  {
+ /*  {
     id: "secretary",
     name: "Ayodele Kotey B.A., LL.B., LL.M., ACIS, DCP",
     title: "Corporate Lawyer, Chartered Company Secretary, Governance Professional and International Development Strategist",
@@ -41,5 +41,5 @@ export const teamData: TeamMember[] = [
       "Ademola Sikiru Akeso is a Software Engineer, Technology Entrepreneur, AI and Blockchain Enthusiast, Youth Leadership Advocate and Community Builder with professional experience spanning software development, web technologies, blockchain, digital products, technology education and emerging technology ecosystems.",
       "He has built his career at the intersection of technology, entrepreneurship, innovation and community development, with a particular interest in using digital solutions to solve practical problems and create opportunities for individuals, businesses and communities. His technical experience covers frontend and backend engineering, full-stack web development, application architecture, databases, APIs, cloud deployment, blockchain technologies and digital product development.",
        ]
-  }
+  } */
 ];
