@@ -9,6 +9,7 @@ export default function Contact() {
     reason: "General Inquiry",
     message: ""
   });
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
@@ -22,6 +23,16 @@ export default function Contact() {
     const subject = encodeURIComponent(`Contact: ${formData.reason}`);
     const body = encodeURIComponent(`Name: ${formData.name}\n\nMessage:\n${formData.message}`);
     window.location.href = `mailto:ceo@sfmedia.ca?subject=${subject}&body=${body}`;
+    
+    // Show success modal
+    setIsSubmitted(true);
+    
+    // Reset form optionally
+    setFormData({
+      name: "",
+      reason: "General Inquiry",
+      message: ""
+    });
   };
 
   return (
@@ -51,7 +62,7 @@ export default function Contact() {
       </header>
 
       {/* Contact Form Section */}
-      <section className="section" style={{ paddingTop: '160px', minHeight: '80vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <section className="section" style={{ paddingTop: '160px', minHeight: '80vh', display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative' }}>
         <div className="container" style={{ maxWidth: '600px', width: '100%' }}>
           <div className="section-heading centered" style={{ marginBottom: '40px' }}>
             <p className="section-label">GET IN TOUCH</p>
@@ -114,6 +125,38 @@ export default function Contact() {
             </button>
           </form>
         </div>
+
+        {/* Success Modal */}
+        {isSubmitted && (
+          <div style={{
+            position: 'fixed', top: 0, left: 0, width: '100%', height: '100%',
+            background: 'rgba(0,0,0,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000
+          }}>
+            <div style={{
+              background: 'white', padding: '40px', borderRadius: '8px', maxWidth: '400px', width: '90%',
+              textAlign: 'center', boxShadow: '0 20px 40px rgba(0,0,0,0.2)'
+            }}>
+              <div style={{
+                width: '60px', height: '60px', background: 'var(--blue)', color: 'white',
+                borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: '30px', margin: '0 auto 20px auto'
+              }}>
+                ✓
+              </div>
+              <h3 style={{ color: 'var(--navy)', fontSize: '24px', marginBottom: '10px' }}>Message Prepared!</h3>
+              <p style={{ color: 'var(--grey)', lineHeight: '1.6', marginBottom: '25px', fontSize: '15px' }}>
+                Your email client has been opened to send the message. We will get back to you shortly.
+              </p>
+              <button 
+                onClick={() => setIsSubmitted(false)}
+                className="button button-primary"
+                style={{ border: 'none', cursor: 'pointer', fontFamily: 'inherit', width: '100%' }}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Footer */}
