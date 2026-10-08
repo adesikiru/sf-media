@@ -272,7 +272,7 @@ export default function Home() {
           <div className="section-heading centered">
             <p className="section-label">MEET OUR TEAM</p>
             <h2>
-              The people behind
+              ... behind
               <br />
               <span>the vision.</span>
             </h2>
